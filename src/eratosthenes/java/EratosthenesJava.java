@@ -27,21 +27,21 @@ public class EratosthenesJava {
         int i = in.nextInt();
         if (i==1){
             System.out.println("no prime number ");
-        }else{
-            for (int j =2;j<i;j++){
-                boolean found =false;
-                for(int n =0; n<prime.size(); n++){
-                if ((j%prime.get(n))==0){
+        }else{//start to find prime numbers 
+            for (int j =2;j<i;j++){//start from 2 
+                boolean found =false;//set the found as false 
+                for(int n =0; n<prime.size(); n++){//loop to dicern whether it is a prime number or not 
+                if ((j%prime.get(n))==0){//if the number is divisible, finish the loop 
                     found = false;
                     break;
-                }else{
+                }else{//if it is not devisible, it continues and found is true
                 found = true;}
                 }
-                if (found){
-                    prime.add(j);
+                if (found){//if found is not false, j is a prime number 
+                    prime.add(j);//add j in the prime 
                   }
             }
-            for(int n =0; n<prime.size(); n++){
+            for(int n =0; n<prime.size(); n++){//output the prime number 
                 System.out.println("Prime Number:" + prime.get(n) );}
         }
           
